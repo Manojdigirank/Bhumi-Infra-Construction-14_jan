@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhumi Infra Construction & Consultant | Building Construction Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1a5f9e;
+            --secondary-blue: #2d7dc5;
+            --accent-green: #2e8b57;
+            --accent-yellow: #ffc107;
+            --light-yellow: #fff9e6;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333333;
+            --medium-gray: #666666;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-green);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: var(--accent-green);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+        }
+
+        .btn-yellow {
+            background-color: var(--accent-yellow);
+            color: var(--dark-gray);
+        }
+
+        .btn-yellow:hover {
+            background-color: #e0a800;
+        }
+
+        /* HEADER */
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #ffffff;
+            z-index: 9999;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* HEADER LAYOUT */
+        .header-container {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            padding: 14px 0;
+        }
+
+        /* LOGO */
+        .logo img {
+            width: 250px;
+            height: auto;
+            display: block;
+        }
+
+        /* NAV MENU (CENTERED) */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            /* CENTER NAV */
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAV LINKS */
+        .nav-menu li a {
+            text-decoration: none;
+            color: #1f2933;
+            font-size: 18px;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        /* HOVER EFFECT */
+        .nav-menu li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #0EA8CE;
+            transition: 0.3s;
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu li a:hover {
+            color: #0EA8CE;
+        }
+
+        /* CTA BUTTON */
+        .nav-btn {
+            padding: 9px 20px;
+            background: #0EA8CE;
+            color: #fff !important;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            background: #0962AE;
+        }
+
+        /* MOBILE TOGGLE */
+        .mobile-toggle {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .header-container {
+                grid-template-columns: auto auto;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                gap: 0;
+                display: none;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #eee;
+            }
+
+            .nav-menu li a {
+                padding: 15px;
+                display: block;
+            }
+
+            .mobile-toggle {
+                display: block;
+                justify-self: end;
+            }
+        }
+
+
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/1.png');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: rgba(26, 95, 158, 0.85);
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--light-yellow);
+        }
+
+        .tagline {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tagline-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            margin: 5px 10px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+
+        .highlight-box {
+            background-color: var(--accent-yellow);
+            color: var(--dark-gray);
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 30px auto;
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-box h3 {
+            font-size: 1.8rem;
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+        }
+
+        .offer {
+            background-color: var(--accent-green);
+            color: var(--white);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            margin-top: 40px;
+        }
+
+        .hero-buttons .btn {
+            margin: 0 10px;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 30px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            /* Add About Image Here */
+            background-color: #ddd;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--medium-gray);
+            font-size: 1.2rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--light-yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-blue);
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: var(--light-gray);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-img {
+            height: 360px;
+            width: 100%;
+            /* Add Project Image Here */
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--medium-gray);
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-img {
+            height: 250px;
+            width: 100%;
+            /* Add Team Member Photo Here */
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--medium-gray);
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-info h3 {
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .team-info p {
+            color: var(--accent-green);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        /* ================= CONTACT SECTION ================= */
+        .contact {
+            padding: 90px 0;
+            background: #f4fbfd;
+        }
+
+        .contact .section-title h2 {
+            font-size: 34px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0962AE;
+        }
+
+        /* MAIN GRID */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+        }
+
+        /* FORM CARD */
+        .contact-form-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form-container h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #0962AE;
+        }
+
+        /* FORM GROUP */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            display: block;
+            color: #1f2933;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid #dbe9ef;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #0EA8CE;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(14, 168, 206, 0.25);
+        }
+
+        /* SUBMIT BUTTON */
+        .contact-form-container .btn {
+            margin-top: 10px;
+            background: linear-gradient(135deg, #0EA8CE, #0962AE);
+            color: #fff;
+            padding: 14px;
+            border-radius: 999px;
+            border: none;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .contact-form-container .btn:hover {
+            background: linear-gradient(135deg, #0962AE, #0EA8CE);
+        }
+
+        /* CONTACT INFO CARD */
+        .contact-info {
+            background: linear-gradient(135deg, #0962AE, #0EA8CE);
+            color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .contact-info h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #000000
+        }
+
+        /* INFO ITEMS */
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(217, 68, 68, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .contact-item h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 3px;
+            color: #000
+        }
+
+        .contact-item p {
+            font-size: 14px;
+            opacity: 0.95;
+            margin: 0;
+        }
+
+        /* SOCIAL LINKS */
+        .social-links {
+            display: flex;
+            gap: 14px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .social-links a:hover {
+            background: #0962AE;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                margin-top: 30px;
+            }
+        }
+
+
+        /* ================= FOOTER ================= */
+        .footer {
+            background: linear-gradient(135deg, #0962AE, #0EA8CE);
+            color: #ffffff;
+            padding: 70px 0 25px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+            gap: 40px;
+        }
+
+        /* LOGO */
+        .footer-logo img {
+            width: 160px;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* TEXT */
+        .footer-desc {
+            font-size: 18px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* TITLES */
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background: #ffffff;
+            display: block;
+            margin-top: 6px;
+        }
+
+        /* LINKS */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            opacity: 0.9;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: 6px;
+        }
+
+        /* CONTACT */
+        .footer-contact p {
+            font-size: 17px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .footer-contact i {
+            color: #ffffff;
+            margin-top: 3px;
+        }
+
+        .footer-contact a {
+            color: #ffffff;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .footer-contact a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* COPYRIGHT */
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .copyright p {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer {
+                text-align: center;
+            }
+
+            .footer-contact p {
+                justify-content: center;
+            }
+        }
+
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background-color: var(--white);
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 15px 0;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-buttons .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+
+            .about-text,
+            .about-image {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 575px) {
+
+            /* Overall footer spacing */
+            .footer {
+                padding: 50px 0 20px;
+                text-align: center;
+            }
+
+            .footer-container {
+                gap: 32px;
+            }
+
+            /* LOGO CENTER & COMPACT */
+            .footer-logo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .footer-logo img {
+                width: 90px;
+                /* slightly bigger for branding */
+                margin-bottom: 8px;
+            }
+
+            .footer-logo p {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 14px;
+                opacity: 0.9;
+            }
+
+            /* DESCRIPTION TEXT */
+            .footer-desc {
+                font-size: 14px;
+                line-height: 1.6;
+                max-width: 320px;
+                margin: 0 auto;
+                opacity: 0.95;
+            }
+
+            /* SECTION TITLES */
+            .footer-col h3 {
+                font-size: 17px;
+                margin-bottom: 16px;
+            }
+
+            .footer-col h3::after {
+                margin: 8px auto 0;
+            }
+
+            /* LINKS CENTERED & CLEAN */
+            .footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .footer-links a {
+                font-size: 14px;
+                padding: 4px 0;
+            }
+
+            /* CONTACT INFO CENTER */
+            .footer-contact p {
+                justify-content: center;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            /* COPYRIGHT */
+            .copyright {
+                margin-top: 30px;
+                padding-top: 15px;
+            }
+
+            .copyright p {
+                font-size: 12.5px;
+            }
+        }
+
+        /* ===== FULL WIDTH LANDSCAPE CONSTRUCTION SECTION ===== */
+
+        .construction-full {
+            width: 100%;
+            background: linear-gradient(90deg,
+                    #eef7fb 0%,
+                    #f7fcff 100%);
+            padding: 80px 6%;
+        }
+
+        .construction-inner {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* LEFT TEXT */
+        .construction-text h2 {
+            font-size: 44px;
+            font-weight: 800;
+            color: #0962AE;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 28px;
+        }
+
+        /* TAGS */
+        .tagline {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .tagline span {
+            padding: 10px 22px;
+            border-radius: 999px;
+            border: 1.5px solid #bfe7f4;
+            background: #ffffff;
+            color: #0962AE;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* RIGHT SIDE */
+        .construction-offers {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        /* PRICE CARD */
+        .price-card {
+            background: #ffffff;
+            padding: 24px 28px;
+            border-radius: 16px;
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #0EA8CE;
+        }
+
+        .price-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0962AE;
+            margin-bottom: 6px;
+        }
+
+        .price-card p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* OFFER PILL */
+        .offer-pill {
+            background: #12a8c9;
+            color: #ffffff;
+            padding: 16px 32px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 16px;
+            width: fit-content;
+        }
+
+        /* BUTTONS */
+        .section-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s ease;
+            font-size: 15px;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: #12a8c9;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #0c7ea0;
+        }
+
+        .btn-secondary {
+            background: #0f6fb2;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #0b5c95;
+        }
+
+        .btn-outline {
+            background: #ffffff;
+            border: 1.5px solid #d9d9d9;
+            color: #0962AE;
+        }
+
+        .btn-outline:hover {
+            background: #f3f3f3;
+        }
+
+        /* MOBILE */
+        @media (max-width: 992px) {
+            .construction-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .construction-text h2 {
+                font-size: 32px;
+            }
+        }
+
+        /* ================= NEW HERO SECTION ================= */
+        /* ================= NEW HERO SECTION ================= */
+
+        .new-hero {
+            position: relative;
+            height: 100vh;
+            background: url("images/new/banner.jpeg") center center / cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Overlay – 50% */
+        .new-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* Content */
+        .new-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .new-hero-content {
+            max-width: 900px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        /* Heading */
+        .new-hero-content h1 {
+            font-size: 75px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-top: 45px;
+            /* margin-bottom: 15px; */
+            color: #ffffff;
+            white-space: nowrap;
+            /* keeps heading in one line */
+        }
+
+        /* Paragraph */
+        .new-hero-content p {
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        /* ================= WORD ANIMATION ================= */
+
+        .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: wordFadeUp 2s ease forwards;
+            margin-right: 8px;
+            /* ✅ THIS FIXES SPACING */
+        }
+
+
+        @keyframes wordFadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= MOBILE HERO FIX ================= */
+
+        @media (max-width: 768px) {
+
+            .new-hero-content {
+                padding: 0 20px;
+            }
+
+            .new-hero-content h1 {
+                font-size: 35px;
+                /* 🔥 reduced for mobile */
+                line-height: 1.25;
+                white-space: normal;
+                /* ✅ allow proper wrapping */
+                text-align: center;
+                margin-bottom: -80px;
+            }
+
+            .new-hero-content p {
+                font-size: 15px;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            /* word spacing adjustment for mobile */
+            .word {
+                margin-right: 6px;
+                /* tighter spacing on phone */
+            }
+        }
+
+        /* ================= HEADER RIGHT ================= */
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-icon {
+            font-size: 16px;
+            color: #0962AE;
+        }
+
+        .header-icon:hover {
+            color: #0EA8CE;
+        }
+
+        /* MOBILE CTA */
+        .mobile-cta {
+            display: none;
+        }
+
+        /* MOBILE EXTRA (inside menu) */
+        .mobile-extra {
+            display: none;
+            padding: 18px;
+        }
+
+        .mobile-socials {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .mobile-socials a {
+            font-size: 16px;
+            color: #0962AE;
+        }
+
+        /* ================= MOBILE VIEW ================= */
+
+        @media (max-width: 991px) {
+
+            .header-container {
+                grid-template-columns: auto 1fr auto;
+                position: relative;
+            }
+
+            /* Hide desktop right items */
+            .desktop-cta,
+            .header-icon {
+                display: none;
+            }
+
+            /* Show mobile CTA */
+            .mobile-cta {
+                display: flex;
+                justify-content: center;
+            }
+
+            /* Nav menu mobile */
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #eee;
+            }
+
+            .nav-menu li a {
+                padding: 15px;
+                display: block;
+            }
+
+            /* Mobile extras */
+            .mobile-extra {
+                display: block;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        /* ================= MOBILE HEADER FIX ================= */
+
+        @media (max-width: 991px) {
+
+            /* Header layout fix */
+            .header-container {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                gap: 10px;
+            }
+
+            /* Logo left */
+            .logo img {
+                width: 160px;
+            }
+
+            /* Center Get Quote */
+            .mobile-cta {
+                display: flex;
+                justify-content: center;
+            }
+
+            .mobile-cta .nav-btn {
+                padding: 8px 18px;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+
+            /* Toggle right */
+            .mobile-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                font-size: 22px;
+                z-index: 10001;
+            }
+
+            /* Hide desktop items */
+            .header-right .desktop-cta,
+            .header-right .header-icon {
+                display: none;
+            }
+
+            /* Mobile menu */
+            .nav-menu {
+                position: fixed;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                display: none;
+                z-index: 9999;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                border-bottom: 1px solid #eee;
+                text-align: center;
+            }
+
+            .nav-menu li a {
+                padding: 16px;
+                display: block;
+                font-size: 16px;
+            }
+
+            /* Extra mobile content */
+            .mobile-extra {
+                display: block;
+                padding: 20px 0;
+            }
+
+            .mobile-socials {
+                margin-top: 12px;
+            }
+        }
+
+        /* =========================================================
+   FINAL HEADER & MOBILE NAV FIX (SAFE OVERRIDE)
+   ========================================================= */
+
+        /* ---------- DESKTOP (NO CHANGE, JUST ALIGNMENT SAFETY) ---------- */
+
+        .header-container {
+            grid-template-columns: auto 1fr auto;
+        }
+
+        /* Right-side icons container (desktop) */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .header-actions a {
+            color: #0962AE;
+            font-size: 16px;
+        }
+
+        .header-actions .nav-btn {
+            padding: 9px 20px;
+            background: #0EA8CE;
+            color: #fff !important;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        /* ---------- MOBILE HEADER FIX ---------- */
+
+        @media (max-width: 991px) {
+
+            /* HEADER GRID */
+            .header-container {
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+            }
+
+            /* LOGO LEFT */
+            .logo img {
+                width: 170px;
+            }
+
+            /* GET QUOTE CENTER */
+            .header-actions {
+                justify-self: center;
+            }
+
+            .header-actions .nav-btn {
+                padding: 8px 18px;
+                font-size: 14px;
+            }
+
+            /* TOGGLE RIGHT */
+            .mobile-toggle {
+                display: block;
+                font-size: 22px;
+                cursor: pointer;
+                justify-self: end;
+            }
+
+            /* ---------- MOBILE NAV MENU ---------- */
+            .nav-menu {
+                position: fixed;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                display: none;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                z-index: 9999;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            /* LINKS – SPACING FIX */
+            .nav-menu li {
+                border-bottom: 1px solid #eee;
+            }
+
+            .nav-menu li a {
+                padding: 14px 0;
+                /* ✅ spacing reduced */
+                font-size: 16px;
+                font-weight: 500;
+                color: #1f2933;
+                display: block;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+
+            .nav-menu li a:hover {
+                color: #0EA8CE;
+            }
+
+            /* ---------- MOBILE EXTRA (SOCIAL + PHONE INSIDE MENU) ---------- */
+            .mobile-extra {
+                padding: 14px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .mobile-socials {
+                display: flex;
+                gap: 14px;
+            }
+
+            .mobile-socials a {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: #f1f7fb;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #0962AE;
+                font-size: 15px;
+            }
+        }
+
+        /* =========================================================
+   END FINAL HEADER FIX
+   ========================================================= */
+   /* ===== TEAM SECTION FIX (2 PROFILES CENTERED) ===== */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 380px));
+    justify-content: center;   /* ⬅ center cards */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Card full height & balance */
+.team-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* Image same height */
+.team-img {
+    height: 320px;
+    overflow: hidden;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content aligned nicely */
+.team-info {
+    flex-grow: 1;               /* ⬅ equal height cards */
+    padding: 22px 20px;
+    text-align: center;
+}
+
+.team-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0962AE;
+    margin-bottom: 6px;
+}
+
+.team-info p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #2e8b57;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .team-img {
+        height: 260px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+
+            <!-- LOGO (LEFT) -->
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="Bhumi Infra Logo">
+            </div>
+
+            <!-- NAV MENU (CENTER DESKTOP / DROPDOWN MOBILE) -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                <!-- MOBILE CONTACT + SOCIAL -->
+                <li class="mobile-extra">
+                    <a href="tel:7000194810"><i class="fas fa-phone-alt"></i> 7000194810</a>
+                    <div class="mobile-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- RIGHT SIDE (DESKTOP) -->
+            <div class="header-right">
+
+                <a href="#contact" class="nav-btn desktop-cta">Get Quote</a>
+
+                <a href="tel:7000194810" class="header-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+
+                <a href="#" class="header-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="header-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="header-icon"><i class="fab fa-linkedin-in"></i></a>
+
+                <!-- MOBILE TOGGLE -->
+                <div class="mobile-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            </div>
+
+            <!-- MOBILE CENTER CTA -->
+            <div class="mobile-cta">
+                <a href="#contact" class="nav-btn">Get Quote</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <!-- New Hero Section -->
+    <section class="new-hero" id="home">
+        <div class="new-hero-overlay"></div>
+
+        <div class="container">
+            <div class="new-hero-content">
+                <h1>Building Construction Solutions</h1>
+                <!-- <p>We provide a strong foundation for your dreams</p> -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Bhumi Infra Construction & Consultant is a trusted and professional construction company
+                        providing high-quality residential and commercial construction services. We specialize in new
+                        construction, renovation, and project consultancy with a focus on quality materials, skilled
+                        workmanship, and timely delivery.</p>
+                    <p>Our mission is to build strong, reliable, and value-driven spaces with complete customer
+                        satisfaction. With years of experience in the construction industry, we have successfully
+                        completed numerous projects across Madhya Pradesh.</p>
+                    <p>We believe in transparency, quality work, and building long-term relationships with our clients.
+                        Our team of experienced professionals ensures that every project meets the highest standards of
+                        construction excellence.</p>
+                    <a href="#contact" class="btn">Contact Us Today</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/4.jpeg" alt="Company Office / Construction Site" class="img-fluid">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Construction With Material</h3>
+                    <p>Complete construction services including all materials with transparent pricing and quality
+                        assurance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Bank Loan Assistance</h3>
+                    <p>Expert guidance and support for securing construction loans from leading banks and financial
+                        institutions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Municipal Approval Support</h3>
+                    <p>Complete assistance with all municipal approvals, permits and legal documentation for
+                        construction projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>2D & 3D Architectural Drawing</h3>
+                    <p>Professional architectural planning and visualization with detailed 2D drawings and realistic 3D
+                        models.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Free Site Visit & Consultation</h3>
+                    <p>Complimentary site assessment and expert consultation to understand your construction
+                        requirements.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Free Architectural Planning</h3>
+                    <p>Customized architectural plans designed to maximize space utilization and aesthetic appeal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Major Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/new/1.jpeg" alt="Residential Luxury Villa Project">
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Residential Luxury Villa Project</h3>
+                        <p>Modern villa construction with premium finishes, spacious rooms, and luxury amenities in
+                            Bhopal.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/new/2.jpeg" alt="Commercial Multi-Storey Building">
+                    </div>
+                    <div class="project-info">
+                        <h3>Commercial Multi-Storey Building</h3>
+                        <p>
+                            7-story commercial complex with office spaces, retail areas, and modern facilities in Arera
+                            Colony.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/new/3.jpeg" alt="School / Institution Construction Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>School/Institution Construction</h3>
+                        <p>
+                            Complete construction of educational institution with classrooms, labs, and sports
+                            facilities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/new/4.jpeg" alt="Interior and Renovation Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Interior & Renovation Projects</h3>
+                        <p>
+                            Complete home and office interior design and renovation with modern aesthetics and
+                            functionality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/new/5.jpeg" alt="Residential Apartment Complex Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Residential Apartment Complex</h3>
+                        <p>
+                            Gated community with 30+ apartments, parking, garden, and security systems in Bhopal.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/new/6.jpeg" alt="Industrial Factory Construction Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Industrial Factory Construction</h3>
+                        <p>
+                            Industrial facility construction with warehouse, office space, and utility infrastructure.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+<section class="team" id="team">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Expert Team</h2>
+        </div>
+
+        <div class="team-grid">
+
+            <!-- CEO -->
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="images/ceo.jpeg" alt="Ms. Pinky Ahirwar - CEO">
+                </div>
+                <div class="team-info">
+                    <h3>Ms. Pinky Ahirwar</h3>
+                    <p>Chief Executive Officer (CEO)</p>
+                </div>
+            </div>
+
+            <!-- Lead Civil Engineer -->
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="images/lead.jpeg" alt="Mr. Gambhir Singh Ahirwar - Lead Civil Engineer">
+                </div>
+                <div class="team-info">
+                    <h3>Mr. Gambhir Singh Ahirwar</h3>
+                    <p>Lead Civil Engineer</p>
+                    <p>
+                        Responsible for complete site supervision, structural execution,
+                        quality control, and technical decision-making at construction sites.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Full Width Construction Section -->
+    <section class="construction-full">
+        <div class="construction-inner">
+
+            <div class="construction-text">
+                <h2>Building Construction Solutions</h2>
+                <p class="subtitle">We provide a strong foundation for your dreams</p>
+
+                <div class="tagline">
+                    <span>Residential</span>
+                    <span>Commercial</span>
+                    <span>Office</span>
+                    <span>School</span>
+                </div>
+            </div>
+
+            <div class="construction-offers">
+                <div class="price-card">
+                    <h3>With Material Construction @ ₹1499 Per Sq.ft</h3>
+                    <p>Complete construction with quality materials</p>
+                </div>
+
+                <div class="offer-pill">
+                    FREE Modular Kitchen + 3 Years Maintenance
+                </div>
+
+                <div class="section-buttons">
+                    <a href="#contact" class="btn btn-primary">Get Quote</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                    <a href="#about" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <h3>Send us a message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="construction">Construction With Material</option>
+                                <option value="loan">Bank Loan Assistance</option>
+                                <option value="approval">Municipal Approval Support</option>
+                                <option value="drawing">Architectural Drawing</option>
+                                <option value="consultation">Free Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="5"
+                                placeholder="Tell us about your project requirements"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>7000194810 | 9981756563</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Visit Our Office</h4>
+                                <p>Office No. 1, Opp. Sai Board, E-7 Arera Colony, 11 No Bus Stop, Bhopal (MP)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>info@bhumiinfrabuild.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4>Website</h4>
+                                <p>https://bhumiinfrabuild.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 style="margin-top: 30px;">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+
+                <!-- BRAND -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpeg" alt="Bhumi Infra Logo">
+                        <p>Construction & Consultant</p>
+                    </div>
+                    <p class="footer-desc">
+                        Building strong foundations for your dreams with quality construction and professional
+                        consultancy services since 2005.
+                    </p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- SERVICES -->
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Construction With Material</a></li>
+                        <li><a href="#services">Bank Loan Assistance</a></li>
+                        <li><a href="#services">Municipal Approval Support</a></li>
+                        <li><a href="#services">2D & 3D Architectural Drawing</a></li>
+                        <li><a href="#services">Free Site Visit & Consultation</a></li>
+                        <li><a href="#services">Free Architectural Planning</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT INFO -->
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://maps.google.com/?q=E-7 Arera Colony Bhopal" target="_blank">
+                                Office No. 1, Opp. Sai Board, E-7 Arera Colony, 11 No Bus Stop, Bhopal (MP)
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:7000194810">7000194810</a> |
+                            <a href="tel:9981756563">9981756563</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@bhumiinfrabuild.com">info@bhumiinfrabuild.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-globe"></i>
+                            <a href="https://bhumiinfrabuild.com" target="_blank">bhumiinfrabuild.com</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 Bhumi Infra Construction & Consultant. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+                mobileToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation
+            if (!name || !phone || !email || !service) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // In a real implementation, you would send this data to a server
+            // For this demo, we'll just show a success message
+            alert(`Thank you ${name}! Your enquiry has been submitted successfully. We will contact you at ${phone} or ${email} within 24 hours.`);
+
+            // Reset the form
+            contactForm.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            function animateWords(element, delayStart = 0) {
+                const words = element.innerText.trim().split(" ");
+                element.innerHTML = "";
+
+                words.forEach((word, index) => {
+                    const span = document.createElement("span");
+                    span.className = "word";
+                    span.style.animationDelay = `${delayStart + index * 0.12}s`;
+                    span.textContent = word;
+                    element.appendChild(span);
+                });
+            }
+
+            const heading = document.querySelector(".new-hero-content h1");
+            const paragraph = document.querySelector(".new-hero-content p");
+
+            if (heading) animateWords(heading, 0);
+            if (paragraph) animateWords(paragraph, 1.2);
+        });
+    </script>
+</body>
+
+</html>
